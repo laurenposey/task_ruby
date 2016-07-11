@@ -4,15 +4,15 @@
 
 <ul>
   <% @tasks.each() do |task| %>
-    <li><%= task.description() %></li>
+    <li><%= task.name() %></li>
   <% end %>
 </ul>
 
 <p>Create a new task:</p>
 
 <form action="/tasks" method="post">
-  <label for="description">Task Description</label>
-  <input id="description" name="description" type="text">
+  <label for="name">Task name</label>
+  <input id="name" name="name" type="text">
 
   <button type="submit">Add task</button>
 </form>
